@@ -5,6 +5,14 @@
         justify-content: center;
         z-index: 5;
     }
+    .mem-description{
+        display: flex;
+        margin-top: 40px;
+        transition: transform 1s;
+    }
+    .slider-wrapper{
+        height: 26em;
+    }
 }
 
 @media (min-width: 769px) {
@@ -13,6 +21,14 @@
         width: 95%;
         justify-content: flex-end;
         z-index: 5;
+    }
+    .mem-description{
+        display: flex;
+        margin-top: -25px;
+        transition: transform 1s;
+    }
+    .slider-wrapper{
+        height: 35em;
     }
 }
 
@@ -48,7 +64,6 @@ body{
 }
 .slider-wrapper{
     width: 400%;
-    height: 35em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,14 +75,11 @@ body{
     z-index: 0;
     opacity: 0;
     width: 40em;
-    height: 30em;
-    background-size: cover;
+    min-height: 30em;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    /*position: absolute;*/
     margin: auto;
-    border-radius: 1em;
-    /*transform: translateX(50%);*/
     transition: transform 1s;
     overflow: hidden;
 }
@@ -84,18 +96,14 @@ body{
 .slide-4{
     background-image: url("images/mem-4.jpg");
 }
-.mem-description p{
 
-}
 .description{
     transform: translateX(50%);
     transition: transform 1s;
     z-index: 0;
     opacity: 0;
 }
-.des1{
 
-}
 .buttons label{
     cursor: pointer;
     width: 1em;
@@ -149,11 +157,7 @@ body{
     z-index: 1;
 }
 
-.mem-description{
-    display: flex;
-    margin-top: -20px;
-    transition: transform 1s;
-}
+
 #slide-1:checked ~ .mem-description{
     transform: translateX(-7%);
 }
@@ -169,7 +173,7 @@ body{
 
 .mem-description p{
     font-family: Arial;
-    font-size: 22px;
+    font-size: 26px;
     color: rgba(74,68,65,0.95);
     white-space: nowrap;
     margin: 0;
