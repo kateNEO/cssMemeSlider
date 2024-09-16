@@ -11,7 +11,13 @@
         transition: transform 1s;
     }
     .slider-wrapper{
-        height: 30em;
+        height: 21em;
+    }
+    .description{
+        transform: translateX(30%);
+    }
+    .mem-description p{
+        font-size: .9em;
     }
 }
 
@@ -29,6 +35,12 @@
     }
     .slider-wrapper{
         height: 33em;
+    }
+    .description{
+        transform: translateX(50%);
+    }
+    .mem-description p{
+        font-size: 1.3em;
     }
 }
 
@@ -98,7 +110,6 @@ body{
 }
 
 .description{
-    transform: translateX(50%);
     transition: transform 1s;
     z-index: 0;
     opacity: 0;
@@ -173,8 +184,11 @@ body{
 
 .mem-description p{
     font-family: Arial;
-    font-size: 26px;
     color: rgba(74,68,65,0.95);
     white-space: nowrap;
     margin: 0;
+}
+.area{
+    width: 30px;
+    height: 30px;
 }
