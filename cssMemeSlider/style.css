@@ -8,9 +8,7 @@ body{
     margin: 0;
 }
 
-
 .mem-area{
-    width: 60em;
     height: 60em;
     background-image: url("images/background.jpeg");
     margin: 60px auto;
@@ -23,19 +21,21 @@ body{
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding-left: 10%;
+    padding-right: 12%;
 }
 .mem-area input{
-    position: absolute;
     display: none;
 }
 .slider-wrapper{
-    width: 80%;
+    width: 400%;
     height: 35em;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    position: relative;
+    /*position: relative;*/
+    transition: transform 1s;
 }
 .slider{
     z-index: 0;
@@ -45,10 +45,10 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
+    /*position: absolute;*/
     margin: auto;
     border-radius: 10px;
-    transform: translateX(50%);
+    /*transform: translateX(50%);*/
     transition: transform 1s;
     overflow: hidden;
 }
@@ -73,34 +73,28 @@ body{
     transition: transform 1s;
     z-index: 0;
     opacity: 0;
-    position: absolute;
 }
-.button-bar label{
+.des1{
+
+}
+.buttons label{
     cursor: pointer;
     width: 1em;
     height: 1em;
     color: #BF9C69;
     display: inline-block;
-    position: relative;
     border: 2px solid #BF9C69;
     border-radius: 50%;
     margin-right: 1em;
     transition: 0.3s;
 }
-.button-bar{
-    display: flex;
-    justify-content: space-between;
-    /*position: absolute;*/
-    margin-bottom: 40px;
-    width: 100%;
-}
-.button-bar label:hover{
-    background-color: #BF9C69;
-}
-.button-bar label:checked{
-    background-color: #BF9C69;
-}
 
+.buttons label:hover{
+    background-color: #BF9C69;
+}
+.buttons label:checked{
+    background-color: #BF9C69;
+}
 
 #slide-1:checked ~ .buttons label:nth-of-type(1),
 #slide-2:checked ~ .buttons label:nth-of-type(2),
@@ -109,34 +103,32 @@ body{
     background-color: #BF9C69;
 }
 
-#slide-1:checked ~ .slider-wrapper > .slide-4,
-#slide-2:checked ~ .slider-wrapper > .slide-1,
-#slide-3:checked ~ .slider-wrapper > .slide-2,
-#slide-4:checked ~ .slider-wrapper > .slide-3{
-    transform: translateX(-50%);
-    opacity: 0;
-    z-index: 0;
-}
-
-
 #slide-1:checked ~ .slider-wrapper > .slide-1,
 #slide-2:checked ~ .slider-wrapper > .slide-2,
 #slide-3:checked ~ .slider-wrapper > .slide-3,
 #slide-4:checked ~ .slider-wrapper > .slide-4{
-    transform: translateX(0);
     opacity: 1;
     z-index: 1;
 }
-#slide-1:checked ~ .mem-description > .description:nth-of-type(2),
-#slide-2:checked ~ .mem-description > .description:nth-of-type(2),
-#slide-3:checked ~ .mem-description > p:nth-of-type(3),
-#slide-4:checked ~ .mem-description > p:nth-of-type(4) {
-    opacity: 1;
-    /*z-index: 1;*/
-    /*transform: translateX(0);*/
+#slide-1:checked ~ .slider-wrapper{
+    transform: translateX(38%);
 }
-
-
+#slide-2:checked ~ .slider-wrapper{
+    transform: translateX(13%);
+}
+#slide-3:checked ~ .slider-wrapper{
+    transform: translateX(-12%);
+}
+#slide-4:checked ~ .slider-wrapper{
+    transform: translateX(-37%);
+}
+#slide-1:checked ~ .mem-description > .des1,
+#slide-2:checked ~ .mem-description > .des2,
+#slide-3:checked ~ .mem-description > .des3,
+#slide-4:checked ~ .mem-description > .des4 {
+    opacity: 1;
+    z-index: 4;
+}
 
 .mem-description{
     display: flex;
